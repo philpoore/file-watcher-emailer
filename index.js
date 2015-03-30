@@ -51,8 +51,9 @@ process.stdin.resume();
 
 function sendEmail(line){
 	console.log('sending email'.green, to, subject);
-	var mail = child_process.spawn('mail', ['-s', subject, to]);
+	var mail = child_process.spawn('sendmail', [to]);
 	mail.stdout.pipe(process.stdout);
+	mail.stdin.write('Subject: ' + subject + '\n\n')
 	mail.stdin.write("File Watcher Emailer has found a match for :" + regexp + '\n\n');
 	mail.stdin.write(line);
 	mail.stdin.end();
