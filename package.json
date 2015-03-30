@@ -1,0 +1,17 @@
+{
+  "name": "file-watcher-emailer",
+  "version": "1.0.0",
+  "description": "Watch a file for regxp, email you the rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Private",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "file-tail": "^0.3.0",
+    "minimist": "^1.1.1",
+    "readline": "0.0.7"
+  }
+}
